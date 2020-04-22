@@ -176,10 +176,10 @@ Spalten** menu to manually set field delimitor and decimal separator.
         shrinking/increasing their size, and with minimal occurrence of
         “fuzzy edges” (mostly ca. 100-130),
       - press **Apply** and close the **Threshold** window.
-        ![](figures/step13.png)
+
+![](figures/step13.png)
 
   - Save this image as `CODE_GI_cropped_02_TH_01.jpg`
-    
       - do NOT use the Save/Save As shortcut, because it will
         automatically save in `.tiff` format
       - instead, use the **File ➜ Save As ➜ Jpeg** dialog
@@ -256,17 +256,21 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 *the simplified workflow in the next couple of screenshots was
 documented on a computer running Ubuntu Mate and a different version of
-GIMP, but should work just the same on Windows* \* Open the threshold
-file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline
-file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both
-files, right click and select Open with GIMP / Öffnen mit GIMP). \* Go
-to the tab with the outline file, mark everything (*STRG + A*), copy
-(*STRG + C*), select the tab with the threshold image and paste the
-outlines on top (*STRG + V*). ![](figures/step21.png)
+GIMP, but should work just the same on Windows*
 
-  - Right click on the new layer (which should be displayed as a loating
-    selection by now) and select “New Layer”/“Neue Ebene”.
-    ![](figures/step22.png)
+  - <a name="inspect"></a>Open the threshold file
+    (`CODE_GI_cropped_02_TH_02.jpg`) and the outline
+    file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark
+    both files, right click and select Open with GIMP / Öffnen mit
+    GIMP).
+
+  - Go to the tab with the outline file, mark everything (*STRG + A*),
+    copy (*STRG + C*), select the tab with the threshold image and paste
+    the outlines on top (*STRG + V*). ![](figures/step21.png)
+
+  - Right click on the new layer (which should be displayed as a
+    floating selection by now) and select **New Layer ** / **Neue
+    Ebene**. ![](figures/step22.png)
 
   - Choose the *Wand* tool (click in image area and press *U*) and click
     into the white area surrounding the outlines.
@@ -276,7 +280,7 @@ outlines on top (*STRG + V*). ![](figures/step21.png)
 
   - Now the threshold image and the classification are overlaid, and it
     should be possible to identify places where the classification did
-    not work
+    not work.
 
   - Most common problems:
     
@@ -286,20 +290,17 @@ outlines on top (*STRG + V*). ![](figures/step21.png)
       - Tracheids mistakenly classified as vessels - solution: higher
         minimum Size or higher minimum Roundness (if tracheids have a
         more blocky shape) in *Analyze Particles*.
-        ![](figures/step24.png)
+
+![](figures/step24.png)
 
   - If there is a large number of misclassifications, go back to ImageJ
     and repeat the [*Analyze Particles*](#anpart) step with different
     settings for Roundness and Size.
-
   - If there are only a few misclassified vessels: manually correct
     misclassifications of large vessels.
-
   - Make sure you choose to edit the layer with the threshold image.
-
   - Choose the pencil tool (shortcut: *N*) to edit the threshold image
     and
-    
       - make sure the right tool options are set: Hardness and Opacity
         should be at 100,
       - *Alt + up/down arrow* or *Alt Gr + mouse wheel* change the
@@ -333,16 +334,15 @@ outlines on top (*STRG + V*). ![](figures/step21.png)
   - Now, open the image in ImageJ (drag and drop) \[if no size in µm is
     shown on the upper left of the image window, you have to [set the
     scale](#setscale) again; see above\],
-
   - Click on **Image ➜ Type ➜ 8bit** to make sure resetting the
     threshold works,
-
   - Reset the threshold by clicking **Image ➜ Adjust ➜ Threshold**
-    
       - The choice of the threshold value should not matter because the
         image is black and white,
       - In some cases it may be necessary to uncheck “Dark Background”
-        to avoid a color swap. ![](figures/step31.png)
+        to avoid a color swap.
+
+![](figures/step31.png)
 
   - Repeat all steps starting from the [*Analyze Particles*](#anpart)
     section.
@@ -355,8 +355,15 @@ outlines on top (*STRG + V*). ![](figures/step21.png)
     `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (**File
     ➜ Save as** in the Results window)
 
+  - Use GIMP to copy the new outlines on top of the threshold image and
+    cut out the background ([just as in this step](#inspect)).
+
+  - Save the resulting image (Export: \_STRG + E\_\_) as
+    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`
+
   - Your project folder should now look somewhat like this (note that
     often, you will have to try more than one setting for circularity
     and minimum vessels size, and you will have to do more than one
     edit, which all show up as additional files in the project folder):
-    ![](figures/step34.png)
+
+![](figures/step34a.png)
