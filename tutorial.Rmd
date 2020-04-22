@@ -96,6 +96,7 @@ If you do not want to change your system settings, you can alternatively export 
     * Choose the options __Default__ and __B&W__ and mark the box __Dark background__,
     * Move the upper slider to find a threshold value that properly separates vessel lumina from background tissue without shrinking/increasing their size, and with minimal occurrence of "fuzzy edges" (mostly ca. 100-130),
     * press __Apply__ and close the __Threshold__ window.
+    
 ![](figures/step13.png)
 
 * Save this image as `CODE_GI_cropped_02_TH_01.jpg`
@@ -143,11 +144,12 @@ If you do not want to change your system settings, you can alternatively export 
 
 # Error inspection in GIMP
 _the simplified workflow in the next couple of screenshots was documented on a computer running Ubuntu Mate and a different version of GIMP, but should work just the same on Windows_
-* Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
+
+* <a name="inspect"></a>Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
 * Go to the tab with the outline file, mark everything (_STRG + A_), copy (_STRG + C_), select the tab with the threshold image and paste the outlines on top (_STRG + V_).
 ![](figures/step21.png)
 
-* Right click on the new layer (which should be displayed as a loating selection by now) and select "New Layer"/"Neue Ebene".
+* Right click on the new layer (which should be displayed as a floating selection by now) and select __New Layer __ / __Neue Ebene__.
 ![](figures/step22.png)
 
 
@@ -155,10 +157,11 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 ![](figures/step23.png)
 
 * Cut out the white background with _STRG + X_.
-* Now the threshold image and the classification are overlaid, and it should be possible to identify places where the classification did not work
+* Now the threshold image and the classification are overlaid, and it should be possible to identify places where the classification did not work.
 * Most common problems:
   * Large vessels not recognized because of their shape - solution: manual correction (see below) or lower minimum on Roundness in ImageJ's _Analyze Particles_ tool,
   * Tracheids mistakenly classified as vessels - solution: higher minimum Size or higher minimum Roundness (if tracheids have a more blocky shape) in _Analyze Particles_.
+  
 ![](figures/step24.png)
 
 * If there is a large number of misclassifications, go back to ImageJ and repeat the [_Analyze Particles_](#anpart) step with different settings for Roundness and Size.
@@ -190,13 +193,18 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 * Reset the threshold by clicking __Image ➜ Adjust ➜ Threshold__ 
   * The choice of the threshold value should not matter because the image is black and white,
   * In some cases it may be necessary to uncheck "Dark Background" to avoid a color swap.
+  
 ![](figures/step31.png)
 
 * Repeat all steps starting from the [_Analyze Particles_](#anpart) section.
 * Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (__File ➜ Save As__ in the main window)
 * If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (__File ➜ Save as__ in the Results window)
 
+* Use GIMP to copy the new outlines on top of the threshold image and cut out the background ([just as in this step](#inspect)). 
+* Save the resulting image (Export: _STRG + E__) as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`
+
 * Your project folder should now look somewhat like this (note that often, you will have to try more than one setting for circularity and minimum vessels size, and you will have to do more than one edit, which all show up as additional files in the project folder):
-![](figures/step34.png)
+
+![](figures/step34a.png)
 
 
