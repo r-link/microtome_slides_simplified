@@ -1,7 +1,7 @@
 ---
 title: "Processing microtome slides with GIMP and ImageJ"
 author: "Roman M. Link"
-date: "October 2019"
+date: "April 2020"
 output: 
   html_document:
     number_sections: true
