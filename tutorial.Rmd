@@ -75,7 +75,7 @@ If you do not want to change your system settings, you can alternatively export 
 
 ![](figures/binary_options.png)
 
-* open the original image with the scale bar (`CODE.jpg`) with ImageJ (either by the File dialog or by dragging and dropping onto the ImageJ window).
+* <a name="setscale"></a>open the original image with the scale bar (`CODE.jpg`) with ImageJ (either by the File dialog or by dragging and dropping onto the ImageJ window).
 * zoom in (_Strg + mouse wheel_) and move the image with the hand tool (or by holding & clicking while pressing the space bar) until the scale bar fills the entire screen.
 * use the __Straight Line__ tool to draw a line from one end of the scale bar to the other.
    * it can be helpful to first roughly position it and then zoom in more. The endpoints of the __Straight Line__ can be repositioned by holding and clicking, but be careful because the zoom function is buggy.
@@ -126,7 +126,7 @@ If you do not want to change your system settings, you can alternatively export 
 
 ![](figures/step18.png)
 
-* Open the __Analyze ➜ Analyze Particles__ dialog,
+* <a name="anpart"></a>Open the __Analyze ➜ Analyze Particles__ dialog,
 * Choose reasonable values for __Size__ and __Circularity__:
     * __Size__ (µm²): permitted range of vessel areas in µm². The minimum is normally more important because it helps to exclude tracheids. For temperate species, a minimum of 100-300 is normally reasonable (less for conifers). The maximum can usually be left at _Infinity_.
    * __Circularity__: The roundness of the vessels (from 0: _not round at all_ to 1: _perfect circles_). This can be helpful to exclude brick-shaped parenchyma cells if they are in the same size range as vessels, but may also lead to an exclusion of damaged vessels. Values of 0.3/0.4-1.0 are usually reasonable.
@@ -139,18 +139,64 @@ If you do not want to change your system settings, you can alternatively export 
 
 ![](figures/step20.png)
 
+* __Do not close__ ImageJ, or you will have to [set the scale](#setscale) again!
 
 # Error inspection in GIMP
+_the simplified workflow in the next couple of screenshots was documented on a computer running Ubuntu Mate and a different version of GIMP, but should work just the same on Windows_
 * Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
+* Go to the tab with the outline file, mark everything (_STRG + A_), copy (_STRG + C_), select the tab with the threshold image and paste the outlines on top (_STRG + V_).
+![](figures/step21.png)
 
-* EDIT and make screenshots!!!!
-* copy on top of each other
-* cut out background
-* change mode to see changes
-* go back to threshold step if it looks bad
-* final slide
+* Right click on the new layer (which should be displayed as a loating selection by now) and select "New Layer"/"Neue Ebene".
+![](figures/step22.png)
 
-* Your project folder should now look somewhat like this (note that often, you will have to try more than one setting for circularity and minimum vessels size, and you will have to do more than one edit, which all show up as additional files in the project folder - add new figure)
+
+* Choose the _Wand_ tool (click in image area and press _U_) and click into the white area surrounding the outlines.
+![](figures/step23.png)
+
+* Cut out the white background with _STRG + X_.
+* Now the threshold image and the classification are overlaid, and it should be possible to identify places where the classification did not work
+* Most common problems:
+  * Large vessels not recognized because of their shape - solution: manual correction (see below) or lower minimum on Roundness in ImageJ's _Analyze Particles_ tool,
+  * Tracheids mistakenly classified as vessels - solution: higher minimum Size or higher minimum Roundness (if tracheids have a more blocky shape) in _Analyze Particles_.
+![](figures/step24.png)
+
+* If there is a large number of misclassifications, go back to ImageJ and repeat the [_Analyze Particles_](#anpart) step with different settings for Roundness and Size.
+* If there are only a few misclassified vessels: manually correct misclassifications of large vessels.
+* Make sure you choose to edit the layer with the threshold image.
+* Choose the pencil tool (shortcut: _N_) to edit the threshold image and 
+  * make sure the right tool options are set: Hardness and Opacity should be at 100,
+  * _Alt + up/down arrow_ or _Alt Gr + mouse wheel_ change the pencil tool tip size,
+  * _X_ can be used to switch between background and foreground color (black and white).
+  
+![](figures/tool options.png)
+
+* Zoom in to places where large vessels were misclassified and "repair" large vessels with wall damage that reduces their roundness below the classification level.
+
+![](figures/step25.png)
+
+![](figures/step26.png)
+
+* Use white color to remove tracheids that are erroneously classified as vessels,
+  * click on the eye symbol on the left of the outline layer to show/hide them & see what you are doing (arrow!),
+  
+![](figures/step27.png)
+
+* When you have finished editing, hide the outline layer (eye symbol!) and export the threshold layer as `CODE_GI_cropped_02_TH_02_edit.jpg`,
+
+# Final steps
+* Now, open the image in ImageJ (drag and drop) [if no size in µm is shown on the upper left of the image window, you have to [set the scale](#setscale) again; see above],
+* Click on __Image ➜ Type ➜ 8bit__ to make sure resetting the threshold works,
+* Reset the threshold by clicking __Image ➜ Adjust ➜ Threshold__ 
+  * The choice of the threshold value should not matter because the image is black and white,
+  * In some cases it may be necessary to uncheck "Dark Background" to avoid a color swap.
+![](figures/step31.png)
+
+* Repeat all steps starting from the [_Analyze Particles_](#anpart) section.
+* Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (__File ➜ Save As__ in the main window)
+* If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (__File ➜ Save as__ in the Results window)
+
+* Your project folder should now look somewhat like this (note that often, you will have to try more than one setting for circularity and minimum vessels size, and you will have to do more than one edit, which all show up as additional files in the project folder):
 ![](figures/step34.png)
 
 
