@@ -135,9 +135,9 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 ![](figures/binary_options.png)
 
-  - open the original image with the scale bar (`CODE.jpg`) with ImageJ
-    (either by the File dialog or by dragging and dropping onto the
-    ImageJ window).
+  - <a name="setscale"></a>open the original image with the scale bar
+    (`CODE.jpg`) with ImageJ (either by the File dialog or by dragging
+    and dropping onto the ImageJ window).
   - zoom in (*Strg + mouse wheel*) and move the image with the hand tool
     (or by holding & clicking while pressing the space bar) until the
     scale bar fills the entire screen.
@@ -222,7 +222,8 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 ![](figures/step18.png)
 
-  - Open the **Analyze ➜ Analyze Particles** dialog,
+  - <a name="anpart"></a>Open the **Analyze ➜ Analyze Particles**
+    dialog,
   - Choose reasonable values for **Size** and **Circularity**:
       - **Size** (µm²): permitted range of vessel areas in µm². The
         minimum is normally more important because it helps to exclude
@@ -248,27 +249,114 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 ![](figures/step20.png)
 
+  - **Do not close** ImageJ, or you will have to [set the
+    scale](#setscale) again\!
+
 # Error inspection in GIMP
 
-  - Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the
-    outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in
-    GIMP (mark both files, right click and select Open with GIMP /
-    Öffnen mit GIMP).
+*the simplified workflow in the next couple of screenshots was
+documented on a computer running Ubuntu Mate and a different version of
+GIMP, but should work just the same on Windows* \* Open the threshold
+file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline
+file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both
+files, right click and select Open with GIMP / Öffnen mit GIMP). \* Go
+to the tab with the outline file, mark everything (*STRG + A*), copy
+(*STRG + C*), select the tab with the threshold image and paste the
+outlines on top (*STRG + V*). ![](figures/step21.png)
 
-  - EDIT and make screenshots\!\!\!\!
+  - Right click on the new layer (which should be displayed as a loating
+    selection by now) and select “New Layer”/“Neue Ebene”.
+    ![](figures/step22.png)
 
-  - copy on top of each other
+  - Choose the *Wand* tool (click in image area and press *U*) and click
+    into the white area surrounding the outlines.
+    ![](figures/step23.png)
 
-  - cut out background
+  - Cut out the white background with *STRG + X*.
 
-  - change mode to see changes
+  - Now the threshold image and the classification are overlaid, and it
+    should be possible to identify places where the classification did
+    not work
 
-  - go back to threshold step if it looks bad
+  - Most common problems:
+    
+      - Large vessels not recognized because of their shape - solution:
+        manual correction (see below) or lower minimum on Roundness in
+        ImageJ’s *Analyze Particles* tool,
+      - Tracheids mistakenly classified as vessels - solution: higher
+        minimum Size or higher minimum Roundness (if tracheids have a
+        more blocky shape) in *Analyze Particles*.
+        ![](figures/step24.png)
 
-  - final slide
+  - If there is a large number of misclassifications, go back to ImageJ
+    and repeat the [*Analyze Particles*](#anpart) step with different
+    settings for Roundness and Size.
+
+  - If there are only a few misclassified vessels: manually correct
+    misclassifications of large vessels.
+
+  - Make sure you choose to edit the layer with the threshold image.
+
+  - Choose the pencil tool (shortcut: *N*) to edit the threshold image
+    and
+    
+      - make sure the right tool options are set: Hardness and Opacity
+        should be at 100,
+      - *Alt + up/down arrow* or *Alt Gr + mouse wheel* change the
+        pencil tool tip size,
+      - *X* can be used to switch between background and foreground
+        color (black and white).
+
+![](figures/tool%20options.png)
+
+  - Zoom in to places where large vessels were misclassified and
+    “repair” large vessels with wall damage that reduces their
+    roundness below the classification level.
+
+![](figures/step25.png)
+
+![](figures/step26.png)
+
+  - Use white color to remove tracheids that are erroneously classified
+    as vessels,
+      - click on the eye symbol on the left of the outline layer to
+        show/hide them & see what you are doing (arrow\!),
+
+![](figures/step27.png)
+
+  - When you have finished editing, hide the outline layer (eye
+    symbol\!) and export the threshold layer as
+    `CODE_GI_cropped_02_TH_02_edit.jpg`,
+
+# Final steps
+
+  - Now, open the image in ImageJ (drag and drop) \[if no size in µm is
+    shown on the upper left of the image window, you have to [set the
+    scale](#setscale) again; see above\],
+
+  - Click on **Image ➜ Type ➜ 8bit** to make sure resetting the
+    threshold works,
+
+  - Reset the threshold by clicking **Image ➜ Adjust ➜ Threshold**
+    
+      - The choice of the threshold value should not matter because the
+        image is black and white,
+      - In some cases it may be necessary to uncheck “Dark Background”
+        to avoid a color swap. ![](figures/step31.png)
+
+  - Repeat all steps starting from the [*Analyze Particles*](#anpart)
+    section.
+
+  - Save the new outlines as
+    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (**File ➜ Save
+    As** in the main window)
+
+  - If you are happy with your classification results, save them as
+    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (**File
+    ➜ Save as** in the Results window)
 
   - Your project folder should now look somewhat like this (note that
     often, you will have to try more than one setting for circularity
     and minimum vessels size, and you will have to do more than one
-    edit, which all show up as additional files in the project folder -
-    add new figure) ![](figures/step34.png)
+    edit, which all show up as additional files in the project folder):
+    ![](figures/step34.png)
