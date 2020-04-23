@@ -4,7 +4,6 @@ author: "Roman M. Link"
 date: "April 2020"
 output: 
   html_document:
-    number_sections: true
     toc: true
     toc_float: true
 ---
