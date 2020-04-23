@@ -45,46 +45,31 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 # Preparation in GIMP
 
-  - Open original image `CODE.jpg`
+  - Open original image `CODE.jpg` ![](figures/step1.png)
 
-  - Select the Polygon Lasso tool (GIMP shortcut: *F*) and cut out xylem
-    and pith (double click to finish selection process)
-    ![](figures/step1.png)
-
-  - Copy selection (*Ctrl + C*)
-
-  - Paste selection to new file (*Ctrl + Shift + V*)
-    ![](figures/step2.png)
-
-  - Close tab with original image (do *not* save changes\!)
-    ![](figures/step3.png)
-
-  - Zoom in to focus on the pith (*+/-* or *Ctrl + mouse wheel*), select
-    the Polygon Lasso tool (*F*) and cut out the pith (*Ctrl + X* or
-    *Del*) ![](figures/step4.png)
-
-  - Export the new picture (full xylem area with cut-out bark and pith)
-    as `CODE_GI_01.jpg` (export as: *Ctrl + Shift + E*) using the
-    maximal quality setting - the GI in the name means the file has been
-    processed in GIMP.
-
-![](figures/step5.png)
-
-  - For further analysis, select a wedge of the original picture with
-    the Lasso tool (*F*) and insert it to a new file (*Ctrl + Shift +
-    V*). Use the shortcut instead of creating a new file manually - this
-    way the image will be automatically cropped, which saves computing
-    power.
-      - select a representative section of the sample (i.e., avoid
-        tension and compression wood),
-      - trace the ray parenchyma to avoid including incomplete vessels,
-      - a subsample of around 300-500 vessels is sufficient, but 1000+
-        is preferable.
+  - Cut out a wedge of the original image with the Polygon Lasso tool
+    (GIMP shortcut: *F*)
+    
+      - Select a wedge of the original picture (double click to end
+        selection process)
+          - select a representative section of the sample (i.e., avoid
+            tension and compression wood),
+          - trace the ray parenchyma to avoid including incomplete
+            vessels,
+          - a subsample of around 300-500 vessels is sufficient, but
+            1000+ is preferable.
+      - Copy selection (*Ctrl + C*),
+      - Paste selection to new file (*Ctrl + Shift + V*). Use the
+        shortcut instead of creating a new file manually - this way the
+        image will be automatically cropped, which saves computing
+        power.
 
 ![](figures/step6.png)
 
   - Save the file `CODE_GI_cropped_01.jpg` (export as: *Ctrl + Shift +
     E*).
+
+  - Close tab with original image (do *not* save changes\!)
 
   - \[optionally\] adjust brightness and contrast using color curves
     (German: **Farben ➜ Kurven**, English: **Colors ➜ Curves**)
@@ -96,18 +81,11 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
   - If your sample is surrounded by transparency (indicated by a
     checkerboard pattern) instead of a white background:
-    
       - make sure the background color is set to white (Press *D* to
         switch to the standard foreground/background colors),
       - right click on the layer and remove the alpha channel
         (**Alphakanal entfernen**),
       - now the image should be surrounded by a white background.
-
-  - save the image in GIMP’s `.xcf` format as `CODE_GI.xcf` or
-    `CODE_GI_cropped.xcf`. This file will be used later for the
-    different post-processing steps necessary to improve the initial
-    image classification.
-
   - decompose image into its RGB components (German: **Farben ➜
     Komponenten ➜ Zerlegen**, English: **Colors ➜ Components ➜
     Decompose**) - this creates a new image that separates the original

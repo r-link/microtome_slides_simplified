@@ -18,33 +18,21 @@ If you do not want to change your system settings, you can alternatively export 
 
 # Preparation in GIMP
 * Open original image `CODE.jpg`
-* Select the Polygon Lasso tool (GIMP shortcut: _F_) and cut out xylem and pith (double click to finish selection process)
 ![](figures/step1.png)
 
-* Copy selection (_Ctrl + C_)
-* Paste selection to new file (_Ctrl + Shift + V_)
-![](figures/step2.png)
-
-
-* Close tab with original image (do *not* save changes!)
-![](figures/step3.png)
-
-* Zoom in to focus on the pith (_+/-_ or _Ctrl + mouse wheel_), select the Polygon Lasso tool (_F_) and cut out the pith (_Ctrl + X_ or _Del_)
-![](figures/step4.png)
-
-
-* Export the new picture (full xylem area with cut-out bark and pith) as `CODE_GI_01.jpg` (export as: _Ctrl + Shift + E_) using the maximal quality setting - the GI in the name means the file has been processed in GIMP.
-
-![](figures/step5.png)
-
-* For further analysis, select a wedge of the original picture with the Lasso tool (_F_) and insert it to a new file (_Ctrl + Shift + V_). Use the shortcut instead of creating a new file manually - this way the image will be automatically cropped, which saves computing power.
-  * select a representative section of the sample (i.e., avoid tension and compression wood),
-  * trace the ray parenchyma to avoid including incomplete vessels,
-  * a subsample of around 300-500 vessels is sufficient, but 1000+ is preferable. 
+* Cut out a wedge of the original image with the Polygon Lasso tool (GIMP shortcut: _F_) 
+  * Select a wedge of the original picture (double click to end selection process)
+      * select a representative section of the sample (i.e., avoid tension and compression wood),
+      * trace the ray parenchyma to avoid including incomplete vessels,
+      * a subsample of around 300-500 vessels is sufficient, but 1000+ is preferable. 
+  * Copy selection (_Ctrl + C_),
+  * Paste selection to new file (_Ctrl + Shift + V_). Use the shortcut instead of creating a new file manually - this way the image will be automatically cropped, which saves computing power. 
 
 ![](figures/step6.png)
 
 * Save the file `CODE_GI_cropped_01.jpg` (export as: _Ctrl + Shift + E_).
+
+* Close tab with original image (do *not* save changes!)
 
 * [optionally] adjust brightness and contrast using color curves (German: __Farben ➜ Kurven__, English: __Colors ➜ Curves__)
   * move the lower point close to the left end of the histogram to make sure the darkest portions of the image are actually black.
@@ -55,8 +43,6 @@ If you do not want to change your system settings, you can alternatively export 
    * make sure the background color is set to white (Press _D_ to switch to the standard foreground/background colors),
    * right click on the layer and remove the alpha channel (__Alphakanal entfernen__),
    * now the image should be surrounded by a white background.
-
-* save the image in GIMP's `.xcf` format as `CODE_GI.xcf` or `CODE_GI_cropped.xcf`. This file will be used later for the different post-processing steps necessary to improve the initial image classification. 
 
 * decompose image into its RGB components (German: __Farben ➜ Komponenten ➜ Zerlegen__, English: __Colors ➜ Components ➜ Decompose__) - this creates a new image that separates the original image into its red, green and blue channel (if this step changes the shape of the wood section and suddenly cut-out areas reappear, you forgot to delete the alpha channel).
 
