@@ -51,14 +51,16 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 2.  Cut out a wedge of the original image with the Polygon Lasso tool
     (GIMP shortcut: *F*)
-      - Select a wedge of the original picture (double click to end
-        selection process)
+      - Select a wedge of the original picture
           - select a representative section of the sample (i.e., avoid
             tension and compression wood),
           - trace the ray parenchyma to avoid including incomplete
             vessels,
           - a subsample of around 300-500 vessels is sufficient, but
             1000+ is preferable.
+      - In older versions of GIMP, a double click ends the selection
+        process. In the current version, you have to press *Enter*
+        instead.
       - Copy selection (*Ctrl + C*),
       - Paste selection to new file (*Ctrl + Shift + V*). Use the
         shortcut instead of creating a new file manually - this way the
@@ -67,8 +69,8 @@ Spalten** menu to manually set field delimitor and decimal separator.
 
 ![](figures/step6.png)
 
-3.  Save the file `CODE_GI_cropped_01.jpg` (export as: *Ctrl + Shift +
-    E*).
+3.  Save the file `CODE_GI_cropped_01.jpg` (using the “Export as” option
+    or via *Ctrl + Shift + E*).
 
 4.  Close tab with original image (do *not* save changes\!)
 
@@ -229,11 +231,11 @@ Spalten** menu to manually set field delimitor and decimal separator.
 ![](figures/step19.png)
 
 26. Save the resulting outlines as a `.jpg` document, specifying the
-    selected **Area** and **Circularity** values in the name (e.g.
-    `CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) using the **File ➜
-    Save As ➜ Jpeg** option in the main menu of ImageJ (not the newly
-    opened **Results** window\!). Make sure the right image window is
-    selected when saving.
+    selected **Area** and **Circularity** values in the name
+    (e.g. `CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) using the
+    **File ➜ Save As ➜ Jpeg** option in the main menu of ImageJ (not the
+    newly opened **Results** window\!). Make sure the right image window
+    is selected when saving.
 
 ![](figures/step20.png)
 
@@ -316,7 +318,8 @@ GIMP, but should work just the same on Windows*
 
 41. When you have finished editing, hide the outline layer (eye
     symbol\!) and export the threshold layer as
-    `CODE_GI_cropped_02_TH_02_edit.jpg`,
+    `CODE_GI_cropped_02_TH_02_edit.jpg` using the “Export as” dialog or
+    *Strg + Shift + E*.
 
 # Final steps
 
@@ -347,8 +350,9 @@ GIMP, but should work just the same on Windows*
 48. Use GIMP to copy the new outlines on top of the threshold image and
     cut out the background ([just as in this step](#inspect)).
 
-49. Save the resulting image (Export: \_STRG + E\_\_) as
-    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`
+49. Save the resulting image (using the “Export as” dialog or \_STRG +
+    Shift + E\_\_) using the name
+    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`.
 
 50. Your project folder should now look somewhat like this (note that
     often, you will have to try more than one setting for circularity

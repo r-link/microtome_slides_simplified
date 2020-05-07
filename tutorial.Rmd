@@ -22,16 +22,17 @@ If you do not want to change your system settings, you can alternatively export 
 ![](figures/step1.png)
 
 2. Cut out a wedge of the original image with the Polygon Lasso tool (GIMP shortcut: _F_) 
-   * Select a wedge of the original picture (double click to end selection process)
+   * Select a wedge of the original picture 
       * select a representative section of the sample (i.e., avoid tension and compression wood),
       * trace the ray parenchyma to avoid including incomplete vessels,
       * a subsample of around 300-500 vessels is sufficient, but 1000+ is preferable. 
+   * In older versions of GIMP, a double click ends the selection process. In the current version, you have to press _Enter_ instead.
    * Copy selection (_Ctrl + C_),
    * Paste selection to new file (_Ctrl + Shift + V_). Use the shortcut instead of creating a new file manually - this way the image will be automatically cropped, which saves computing power. 
 
 ![](figures/step6.png)
 
-3. Save the file `CODE_GI_cropped_01.jpg` (export as: _Ctrl + Shift + E_).
+3. Save the file `CODE_GI_cropped_01.jpg` (using the "Export as" option or via _Ctrl + Shift + E_).
 
 4. Close tab with original image (do *not* save changes!)
 
@@ -177,7 +178,7 @@ _the simplified workflow in the next couple of screenshots was documented on a c
   
 ![](figures/step27.png)
 
-41. When you have finished editing, hide the outline layer (eye symbol!) and export the threshold layer as `CODE_GI_cropped_02_TH_02_edit.jpg`,
+41. When you have finished editing, hide the outline layer (eye symbol!) and export the threshold layer as `CODE_GI_cropped_02_TH_02_edit.jpg` using the "Export as" dialog or _Strg + Shift + E_.
 
 # Final steps
 42. Now, open the image in ImageJ (drag and drop) [if no size in µm is shown on the upper left of the image window, you have to [set the scale](#setscale) again; see above],
@@ -192,7 +193,7 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 46. Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (__File ➜ Save As__ in the main window).
 47. If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (__File ➜ Save as__ in the Results window).
 48. Use GIMP to copy the new outlines on top of the threshold image and cut out the background ([just as in this step](#inspect)). 
-49. Save the resulting image (Export: _STRG + E__) as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`
+49. Save the resulting image (using the "Export as" dialog or _STRG + Shift + E__) using the name `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`.
 
 50. Your project folder should now look somewhat like this (note that often, you will have to try more than one setting for circularity and minimum vessels size, and you will have to do more than one edit, which all show up as additional files in the project folder):
 
