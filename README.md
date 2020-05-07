@@ -119,6 +119,8 @@ Spalten** menu to manually set field delimitor and decimal separator.
 11. <a name="setscale"></a>open the original image with the scale bar
     (`CODE.jpg`) with ImageJ (either by the File dialog or by dragging
     and dropping onto the ImageJ window).
+      - Make sure the image is set to grayscale (i.e. 8bit color space)
+        by verifying if \_\_Image ➜ Type ➜ 8bit \_ is selected.
 12. zoom in (*Strg + mouse wheel*) and move the image with the hand tool
     (or by holding & clicking while pressing the space bar) until the
     scale bar fills the entire screen.
@@ -149,8 +151,8 @@ Spalten** menu to manually set field delimitor and decimal separator.
     corner (if the values is in pixels).
 17. Transform the grayscale image into a threshold image
       - zoom in until individual vessel lumina are visible,
-      - Open the **Threshold** dialog (**Image ➜ Threshold** or *Ctrl +
-        Shift + T*),
+      - Open the **Threshold** dialog (**Image ➜ Adjust ➜ Threshold** or
+        *Ctrl + Shift + T*),
       - Choose the options **Default** and **B\&W** and mark the box
         **Dark background**,
       - Move the upper slider to find a threshold value that properly
@@ -255,7 +257,7 @@ GIMP, but should work just the same on Windows*
     GIMP).
 29. Go to the tab with the outline file, mark everything (*STRG + A*),
     copy (*STRG + C*), select the tab with the threshold image and paste
-    the outlines on top (*STRG + V*).
+    the outlines on top of the threshold image (*STRG + V*).
 
 ![](figures/step21.png)
 

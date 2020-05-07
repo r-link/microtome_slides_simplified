@@ -64,6 +64,7 @@ If you do not want to change your system settings, you can alternatively export 
 ![](figures/binary_options.png)
 
 11. <a name="setscale"></a>open the original image with the scale bar (`CODE.jpg`) with ImageJ (either by the File dialog or by dragging and dropping onto the ImageJ window).
+    * Make sure the image is set to grayscale (i.e. 8bit color space) by verifying if __Image ➜ Type ➜  8bit _ is selected.
 12. zoom in (_Strg + mouse wheel_) and move the image with the hand tool (or by holding & clicking while pressing the space bar) until the scale bar fills the entire screen.
 13. use the __Straight Line__ tool to draw a line from one end of the scale bar to the other.
     * it can be helpful to first roughly position it and then zoom in more. The endpoints of the __Straight Line__ can be repositioned by holding and clicking, but be careful because the zoom function is buggy.
@@ -82,7 +83,7 @@ If you do not want to change your system settings, you can alternatively export 
 16. Open the modified image `CODE_GI_cropped_02.jpg` with ImageJ (drag & drop onto ImageJ bar) - if the scale is correctly set, the dimensions of the picture in µm should be visible in the upper left corner (if the values is in pixels).
 17. Transform the grayscale image into a threshold image
     * zoom in until individual vessel lumina are visible,
-    * Open the __Threshold__ dialog (__Image  ➜  Threshold__ or _Ctrl + Shift + T_),
+    * Open the __Threshold__ dialog (__Image  ➜  Adjust ➜  Threshold__ or _Ctrl + Shift + T_),
     * Choose the options __Default__ and __B&W__ and mark the box __Dark background__,
     * Move the upper slider to find a threshold value that properly separates vessel lumina from background tissue without shrinking/increasing their size, and with minimal occurrence of "fuzzy edges" (mostly ca. 100-130),
     * press __Apply__ and close the __Threshold__ window.
@@ -137,7 +138,7 @@ If you do not want to change your system settings, you can alternatively export 
 _the simplified workflow in the next couple of screenshots was documented on a computer running Ubuntu Mate and a different version of GIMP, but should work just the same on Windows_
 
 28. <a name="inspect"></a>Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
-29. Go to the tab with the outline file, mark everything (_STRG + A_), copy (_STRG + C_), select the tab with the threshold image and paste the outlines on top (_STRG + V_).
+29. Go to the tab with the outline file, mark everything (_STRG + A_), copy (_STRG + C_), select the tab with the threshold image and paste the outlines on top of the threshold image (_STRG + V_).
 
 ![](figures/step21.png)
 
