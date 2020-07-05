@@ -43,6 +43,10 @@ If you do not want to change your system settings, you can alternatively
 export everything in a `.csv` format and use Excel’s **Daten ➜ Text in
 Spalten** menu to manually set field delimitor and decimal separator.
 
+**It is generally recommended to create a separate folder for each
+sample and to keep all files belonging to the sample in this folder.
+Folders should always be named by sample ID.**
+
 # Preparation in GIMP
 
 1.  Open original image `CODE.jpg`
