@@ -145,7 +145,10 @@ Folders should always be named by sample ID.**
 15. In the corresponding dialog, set the **Known Distance** (the value
     above the scale bar), the **Unit of length** (normally µm; see scale
     bar) and - *very important* - mark the box **Global** to make sure
-    that the scale is the same accross all opened documents.
+    that the scale is the same across all opened documents.
+      - Be careful: writing the unit in the **Known Distance** instead
+        of the **Unit of length** box can lead to cryptic error messages
+        about wrongly set thresholds\!
 
 ![](figures/step12.png)
 

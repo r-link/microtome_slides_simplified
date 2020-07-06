@@ -79,7 +79,8 @@ If you do not want to change your system settings, you can alternatively export 
 ![](figures/step11.png)
 
 
-15. In the corresponding dialog, set the **Known Distance** (the value above the scale bar), the **Unit of length** (normally µm; see scale bar) and - *very important* - mark the box **Global** to make sure that the scale is the same accross all opened documents.
+15. In the corresponding dialog, set the **Known Distance** (the value above the scale bar), the **Unit of length** (normally µm; see scale bar) and - *very important* - mark the box **Global** to make sure that the scale is the same across all opened documents. 
+    * Be careful: writing the unit in the __Known Distance__ instead of the __Unit of length__ box can lead to cryptic error messages about wrongly set thresholds!
 
 ![](figures/step12.png)
 
