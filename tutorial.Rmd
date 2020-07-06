@@ -46,7 +46,7 @@ If you do not want to change your system settings, you can alternatively export 
 
 6. If your sample is surrounded by transparency (indicated by a checkerboard pattern) instead of a white background:
     * make sure the background color is set to white (Press _D_ to switch to the standard foreground/background colors),
-    * right click on the layer and remove the alpha channel (__Alphakanal entfernen__),
+    * right click on the layer in the layer menu (usually bottom right) and remove the alpha channel (__Alphakanal entfernen__),
     * now the image should be surrounded by a white background.
 
 7. Decompose the image into its RGB components (German: __Farben ➜ Komponenten ➜ Zerlegen__, English: __Colors ➜ Components ➜ Decompose__) - this creates a new image that separates the original image into its red, green and blue channel (if this step changes the shape of the wood section and suddenly cut-out areas reappear, you forgot to delete the alpha channel).
@@ -145,7 +145,7 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 
 ![](figures/step21.png)
 
-30. Right click on the new layer (which should be displayed as a floating selection by now) and select __New Layer __ / __Neue Ebene__.
+30. Right click on the layer in the layer menu (usually bottom right, should be displayed as a "floating selection"/"schwebende Auswahl" by now) and select __To new Layer __ / __Zur neuen Ebene__.
 
 ![](figures/step22.png)
 

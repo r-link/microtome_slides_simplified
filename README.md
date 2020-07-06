@@ -90,8 +90,8 @@ Folders should always be named by sample ID.**
     checkerboard pattern) instead of a white background:
       - make sure the background color is set to white (Press *D* to
         switch to the standard foreground/background colors),
-      - right click on the layer and remove the alpha channel
-        (**Alphakanal entfernen**),
+      - right click on the layer in the layer menu (usually bottom
+        right) and remove the alpha channel (**Alphakanal entfernen**),
       - now the image should be surrounded by a white background.
 7.  Decompose the image into its RGB components (German: **Farben ➜
     Komponenten ➜ Zerlegen**, English: **Colors ➜ Components ➜
@@ -265,9 +265,9 @@ GIMP, but should work just the same on Windows*
 
 ![](figures/step21.png)
 
-30. Right click on the new layer (which should be displayed as a
-    floating selection by now) and select **New Layer ** / **Neue
-    Ebene**.
+30. Right click on the layer in the layer menu (usually bottom right,
+    should be displayed as a “floating selection”/“schwebende Auswahl”
+    by now) and select **To new Layer ** / **Zur neuen Ebene**.
 
 ![](figures/step22.png)
 
