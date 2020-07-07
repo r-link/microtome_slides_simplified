@@ -196,7 +196,8 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 
 45. Repeat all steps starting from the [_Analyze Particles_](#anpart) section.
 46. Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (__File ➜ Save As__ in the main window).
-47. If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3_Results.xls` (__File ➜ Save as__ in the Results window). __Be careful not to have two dots (".") in the file name or it will not be possible to save as a .csv file!__
+47. If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3_Results.xls` (__File ➜ Save as__ in the Results window). 
+__Be careful not to have two dots (".") in the file name or it will not be possible to save as a .csv file! The screenshots still contain filenames with two dots because we just learned about this bug pretty recently. Please avoid this mistake!__
 48. Use GIMP to copy the new outlines on top of the threshold image and cut out the background ([just as in this step](#inspect)). 
 49. Save the resulting image (using the "Export as" dialog or _STRG + Shift + E__) using the name `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`.
 
