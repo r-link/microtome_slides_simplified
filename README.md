@@ -353,8 +353,10 @@ GIMP, but should work just the same on Windows*
     As** in the main window).
 
 47. If you are happy with your classification results, save them as
-    `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Results.xls` (**File
-    ➜ Save as** in the Results window).
+    `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3_Results.xls` (**File
+    ➜ Save as** in the Results window). **Be careful not to have two
+    dots (“.”) in the file name or it will not be possible to save as a
+    .csv file\!**
 
 48. Use GIMP to copy the new outlines on top of the threshold image and
     cut out the background ([just as in this step](#inspect)).
