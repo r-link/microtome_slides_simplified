@@ -132,7 +132,8 @@ If you do not want to change your system settings, you can alternatively export 
 ![](figures/step19.png)
 
 
-26. Save the resulting outlines as a `.jpg` document, specifying the selected __Area__ and __Circularity__ values in the name (e.g. `CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) using the __File ➜ Save As ➜ Jpeg__ option in the main menu of ImageJ (not the newly opened __Results__ window!). Make sure the right image window is selected when saving.
+26. Save the resulting outlines as a `.jpg` document, specifying the selected __Area__ and __Circularity__ values in the name (e.g. `CODE_GI_cropped_02_TH_02_Outlines_300_0,3.jpg`) using the __File ➜ Save As ➜ Jpeg__ option in the main menu of ImageJ (not the newly opened __Results__ window!). Make sure the right image window is selected when saving.
+* _note that the difference to the screenshots is due to a recent naming update because FIJI seems to have issues with `.xls` export when there's a dot in the file name!_
 
 ![](figures/step20.png)
 
@@ -141,7 +142,7 @@ If you do not want to change your system settings, you can alternatively export 
 # Error inspection in GIMP
 _the simplified workflow in the next couple of screenshots was documented on a computer running Ubuntu Mate and a different version of GIMP, but should work just the same on Windows_
 
-28. <a name="inspect"></a>Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300,0.3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
+28. <a name="inspect"></a>Open the threshold file (`CODE_GI_cropped_02_TH_02.jpg`) and the outline file(`CODE_GI_cropped_02_TH_02_Outlines_300_0,3.jpg`) in GIMP (mark both files, right click and select Open with GIMP / Öffnen mit GIMP). 
 29. Go to the tab with the outline file, mark everything (_STRG + A_), copy (_STRG + C_), select the tab with the threshold image and paste the outlines on top of the threshold image (_STRG + V_).
 
 ![](figures/step21.png)
@@ -195,11 +196,11 @@ _the simplified workflow in the next couple of screenshots was documented on a c
 ![](figures/step31.png)
 
 45. Repeat all steps starting from the [_Analyze Particles_](#anpart) section.
-46. Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3.jpg` (__File ➜ Save As__ in the main window).
+46. Save the new outlines as `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3.jpg` (__File ➜ Save As__ in the main window).
 47. If you are happy with your classification results, save them as `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3_Results.xls` (__File ➜ Save as__ in the Results window). 
 __Be careful not to have two dots (".") in the file name or it will not be possible to save as a .csv file! The screenshots still contain filenames with two dots because we just learned about this bug pretty recently. Please avoid this mistake!__
 48. Use GIMP to copy the new outlines on top of the threshold image and cut out the background ([just as in this step](#inspect)). 
-49. Save the resulting image (using the "Export as" dialog or _STRG + Shift + E__) using the name `CODE_GI_cropped_02_TH_02_edit_Outlines_300,0.3_Analysis.jpg`.
+49. Save the resulting image (using the "Export as" dialog or _STRG + Shift + E__) using the name `CODE_GI_cropped_02_TH_02_edit_Outlines_300_0,3_Analysis.jpg`.
 
 50. Your project folder should now look somewhat like this (note that often, you will have to try more than one setting for circularity and minimum vessels size, and you will have to do more than one edit, which all show up as additional files in the project folder):
 
