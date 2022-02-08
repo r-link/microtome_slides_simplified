@@ -210,8 +210,10 @@ Folders should always be named by sample ID.**
     `CODE_GI_cropped_02_TH_02.jpg`
 
 23. To prepare for automated vessel detection, open the **Analyze ➜ Set
-    Measurements** dialog and select **Area**, **Shape descriptors**,
-    **Perimeter**, **Fit ellipse** and **Feret’s diameter**
+    Measurements** dialog and select **Area** and **Fit ellipse**
+    (please ignore the other measurements marked in the screenshot, the
+    screenshot is from an older run of the tutorial, but they are
+    effectively unnecessary).
 
 ![](figures/step18.png)
 

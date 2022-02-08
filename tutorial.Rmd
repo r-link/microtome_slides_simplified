@@ -119,7 +119,7 @@ If you do not want to change your system settings, you can alternatively export 
 22. Save the image without the black area as `CODE_GI_cropped_02_TH_02.jpg`
 
 
-23. To prepare for automated vessel detection, open the __Analyze ➜ Set Measurements__ dialog and select __Area__, __Shape descriptors__, __Perimeter__, __Fit ellipse__ and __Feret's diameter__
+23. To prepare for automated vessel detection, open the __Analyze ➜ Set Measurements__ dialog and select __Area__ and __Fit ellipse__ (please ignore the other measurements marked in the screenshot, the screenshot is from an older run of the tutorial, but they are effectively unnecessary).
 
 ![](figures/step18.png)
 
